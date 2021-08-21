@@ -36,30 +36,27 @@ var unique_genres=[];
 
     var unique_actors=[];
     movies.forEach(function(movie){
-        movie.cast.forEach(function(genre){
+        movie.cast.forEach(function(actor){
             if(unique_actors.includes(actor)===false){
-                unique_actors.push(genre);
+                unique_actors.push(actor);
             }
-       });
+        });
     });
 
     var actors_genres=[];
     unique_actors.forEach(function(actor){
 
-        genres_genres[actors]=[];
-        
+        actors_genres[actor]=[];
+
         movies.forEach(function(movie){
-            if(movie.actors.includes(actor)===true){
-                movie.cast.forEach(function(genre){
-          if(actors_genres[actor].includes(genre)===false){
-            actors_genres[actor].push(genre);
-          }
+            if(movie.cast.includes(actor)===true){
+                movie.genres.forEach(function(genre){
+                    if(actors_genres[actor].includes(genre)===false){
+                        actors_genres[actor].push(genre);
+                    }
+                });
+            }
         });
-      }
-        });
-  });
+    });
 
-
-  let json_object = Object.fromEntries(Object.entries([genres_actors]))
-    // Display Jason format genre categorized by actors
-    console.log(json_object);
+    console.log(actors_genres);
