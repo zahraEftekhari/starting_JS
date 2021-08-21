@@ -59,4 +59,6 @@ var unique_genres=[];
         });
     });
 
-    console.log(actors_genres);
+    let json_object = Object.fromEntries(Object.entries([actors_genres]))
+    // Display Jason format actors categorized by genre
+    //console.log(jsonObject);
