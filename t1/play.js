@@ -4,24 +4,29 @@ import { movies } from './data.js'
 
 var unique_genres=[];
 
-movies.forEach(function(movie){
-   movie.genres.forEach(function(genre){
-        if(unique_genres.includes(genre)===false){
-            unique_genres.push(genre);
-        }
-   });
-});
+    movies.forEach(function(movie){
+        movie.genres.forEach(function(genre){
+            if(unique_genres.includes(genre)===false){
+                unique_genres.push(genre);
+            }
+        });
+    });
 
-//console.log(unique_genres);
+    var genres_actors=[];
 
-var unique_cast=[];
+    unique_genres.forEach(function(genre){
 
-movies.forEach(function(movie){
-   movie.cast.forEach(function(cast){
-        if(unique_cast.includes(cast)===false){
-            unique_cast.push(cast);
-        }
-   });
-});
-
-console.log(unique_cast);
+        genres_actors[genre]=[];
+        
+        movies.forEach(function(movie){
+            if(movie.genres.includes(genre)===true){
+                movie.cast.forEach(function(actor){
+          if(genres_actors[genre].includes(actor)===false){
+                        genres_actors[genre].push(actor);
+          }
+        });
+      }
+        });
+  });
+    
+    console.log(genres_actors);
