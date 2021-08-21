@@ -30,6 +30,36 @@ var unique_genres=[];
   });
 
   let jsonObject = Object.fromEntries(Object.entries([genres_actors]))
-    
-    console.log(jsonObject);
+    // Display Jason format actors categorized by genre
+    //console.log(jsonObject);
 
+
+    var unique_actors=[];
+    movies.forEach(function(movie){
+        movie.cast.forEach(function(genre){
+            if(unique_actors.includes(actor)===false){
+                unique_actors.push(genre);
+            }
+       });
+    });
+
+    var actors_genres=[];
+    unique_actors.forEach(function(actor){
+
+        genres_genres[actors]=[];
+        
+        movies.forEach(function(movie){
+            if(movie.actors.includes(actor)===true){
+                movie.cast.forEach(function(genre){
+          if(actors_genres[actor].includes(genre)===false){
+            actors_genres[actor].push(genre);
+          }
+        });
+      }
+        });
+  });
+
+
+  let json_object = Object.fromEntries(Object.entries([genres_actors]))
+    // Display Jason format genre categorized by actors
+    console.log(json_object);
