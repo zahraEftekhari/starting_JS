@@ -12,4 +12,16 @@ movies.forEach(function(movie){
    });
 });
 
-console.log(unique_genres);
+//console.log(unique_genres);
+
+var unique_cast=[];
+
+movies.forEach(function(movie){
+   movie.cast.forEach(function(cast){
+        if(unique_cast.includes(cast)===false){
+            unique_cast.push(cast);
+        }
+   });
+});
+
+console.log(unique_cast);
