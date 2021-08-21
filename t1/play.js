@@ -28,5 +28,8 @@ var unique_genres=[];
       }
         });
   });
+
+  let jsonObject = Object.fromEntries(Object.entries([genres_actors]))
     
-    console.log(genres_actors);
+    console.log(jsonObject);
+
