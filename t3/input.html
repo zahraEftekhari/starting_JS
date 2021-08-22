@@ -4,24 +4,54 @@
 <head>
     <meta charset="utf-8">
     <title>
-        How to get values from html input
-        array using JavaScript ?
+        input
     </title>
 </head>
+<style>
+    body {
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 8px;
+}
+    .button {
+        border-radius: 80%;
+        border: 2px solid #2b0242;
+        background-color:rgb(194, 150, 235);
+        font-family: Copperplate, Papyrus, fantasy;
+    }
+    button:hover{
+        background-color: skyblue;
+        font-size: 20px;
+    }
+    .input {
+        border-radius: 30%;
+        border: 2px solid #2b0242;
+    }
+    input:hover{
+        background-color:rgba(194, 150, 235,0.5);
+
+        
+    }
+    .form{
+        
+    }
+</style>
   
 <body style="text-align: center;">
       
     
   
     <h3 id="po">Input Elements The Way Array</h3>
-    <form class="" action="index.html" method="post">
-        <input type="text" name="array[]" value="" /><br>
+    <form class="form" action="index.html" method="post">
+        <label >The first step : </label>
+        <input class="input" type="text" name="array[]" value="" /><br>
         <br>
-        <input type="text" name="array[]" value="" /><br>
+        <label>The second step :</label>
+        <input class="input" type="text" name="array[]" value="" /><br>
         <br>
-        <input type="text" name="array[]" value="" /><br>
+        <label>The third step : </label>
+        <input class="input" type="text" name="array[]" value="" /><br>
         <br>
-        <button type="button" name="button" onclick="get_way()">
+        <button class="button" type="button" name="button" onclick="get_way()">
             Submit
         </button>
     </form>
