@@ -31,7 +31,7 @@ var unique_genres=[];
 
   let jsonObject = Object.fromEntries(Object.entries([genres_actors]))
     // Display Jason format actors categorized by genre
-    //console.log(jsonObject);
+    console.log(jsonObject);
 
 
     var unique_actors=[];
